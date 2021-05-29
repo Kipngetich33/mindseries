@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+
+<!-- add a block body that will contain contents of this page -->
+{% block body %}
+  <!-- includes the logo section here from logo.html -->
+  {% include 'logo_section.html' %}
+  <!-- add another row using bootstrap grids -->
+  <div class="row">
+    <!-- user bootstrap column grids to center the contents -->
+    <div class="col-md-3"></div>
+    <!-- only use the middle row for content -->
+    <div class="col-md-6">
+      <div class="center_align" id="sign_in_form">
+        <h1 class="elements_space" >Sign Up</h1>
+        <!-- add the sign in form here -->
+        <form class="row g-3">
+            <div class="col-auto">
+                <input type="password" class="form-control form-control-lg elements_space" id="text" placeholder="First name">
+            </div>
+            <div class="col-auto">
+                <input type="password" class="form-control form-control-lg elements_space" 
+                id="text" placeholder="Last name">
+            </div>
+            <input class="form-control form-control-lg elements_space" type="text"
+            placeholder="User name" aria-label=".form-control-lg example"
+            style="margin-left:5px;margin-right:100px;">
+            <div class="col-auto">
+            </div>
+            
+            <div class="d-grid gap-3">
+            <button class="btn form-control-lg elements_space action_button" type="button">Next</button>
+            </div>
+            <div id="button_links" class="elements_space">
+            <p>
+                Already a user? 
+                <a href="/" style="color:#E89C31;">Login Here</a>
+            </p>
+            </div>
+        </form>
+        
+      </div>
+    </div>
+    <div class="col-md-3"></div>
+  </div>
+
+{% endblock %}
+<!-- end of block content -->

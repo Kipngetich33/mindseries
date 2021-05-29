@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+
+<!-- add a block body that will contain contents of this page -->
+{% block body %}
+  <!-- add another row using bootstrap grids -->
+  <div class="row">
+    <!-- user bootstrap column grids to center the contents -->
+    <div class="col-md-4"></div>
+    <!-- only use the middle row for content -->
+    <div class="col-md-4">
+      <div class="center_align" id="sign_in_form" style="margin-top: 0px;">
+        <i style="font-size:200px;" class="far fa-user-circle"></i>
+        <i style="font-size:30px;" class="fas fa-pencil-alt"></i>
+
+        <p>Username</p>
+        <h6 style="">Member since Jan 2021</h6>
+
+        <h1 class="elements_space" >Edit your details</h1>
+        <!-- add the sign in form here -->
+        <input class="form-control form-control-lg elements_space" type="text" placeholder="First Name" aria-label=".form-control-lg example">
+        <input class="form-control form-control-lg elements_space" type="text" placeholder="Last Name" aria-label=".form-control-lg example">
+        <input class="form-control form-control-lg elements_space" type="text" placeholder="Email" aria-label=".form-control-lg example">
+        <div class="d-grid gap-2">
+          <button class="btn form-control-lg elements_space action_button" type="button">Save</button>
+        </div>
+        <div id="button_links" class="elements_space">
+            <p>
+                <a href="/reset_password" style="color:#E89C31;">Reset Password?</a>
+            </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4"></div>
+  </div>
+
+{% endblock %}
+<!-- end of block content -->

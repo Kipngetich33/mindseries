@@ -2,27 +2,52 @@
 <html lang="en">
   <head>
     <title>{% block title %}{% endblock %}</title>
-    <!-- Bootstrap core CSS -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom styles for this template -->
-    <link href="https://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+    <!-- cdn to bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/a3ae98e4b3.js" crossorigin="anonymous"></script>
+    <!-- <link href=".styles.css" rel="stylesheet"> -->
+    <style>
+      body{
+        background-color: #152238;
+        color:white;
+        padding: 50px;;
+      }
+      .center_align{
+        text-align: center;
+      }
+      #mind_series_heading_containter{
+        padding: 15px;
+        background-color:#0e1725;
+      }
+      #sign_in_form{
+        margin-top: 100px;
+      }
+      .elements_space{
+        margin-top:30px;
+      }
+      .action_button{
+        background-color:#E89C31 ;
+        color:white;
+        padding:10px;
+      }
+      .floatright{
+        float: right;
+      }
+      .floatleft{
+        float: left;
+      }
+      a{
+        color:white;
+        text-decoration: none;
+      }
+      .bold{
+        font-weight: bold;
+      }
+    </style>
+    
   </head>
-  <body>
-    <div class="container">
-      <div class="header clearfix">
-        <nav>
-          <ul class="nav nav-pills pull-right">
-            <li role="presentation"><a href="/">Home</a></li>
-            <li role="presentation"><a href="/about">About</a></li>
-            <li role="presentation"><a href="http://flask.pocoo.org" target="_blank">More About Flask</a></li>
-          </ul>
-        </nav>
-      </div>
-      {% block body %}
-      {% endblock %}
-      <footer class="footer">
-        <p>&copy; 2016 Your Name Here</p>
-      </footer>
-    </div> <!-- /container -->
+  <body >
+    {% block body %}
+    {% endblock %}
   </body>
 </html>
