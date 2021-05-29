@@ -1,8 +1,38 @@
 {% extends "base.html" %}
 {% block title %}About{% endblock %}
 {% block body %}
-<div class="jumbotron">
-  <h1>The About Page</h1>
-  <p class="lead">This is a paragraph</p>
-</div>
+  <!-- include the top menu here -->
+  {% include 'top_menu.html' %}
+  <!-- <h1 class="elements_space" style="background-color: #E89C31;"> Affirmations </h1> -->
+  <button class="btn form-control-lg elements_space action_button" type="button">
+      <h1 >Journal</h1>
+  </button>
+  <div >
+    <form class="row g-4">
+      <div class="col-auto elements_space" >
+        <h1 >January 3 2021</h1>
+      </div>
+      <div class="col-auto elements_space" >
+        <input type="text" readonly class="form-control-plaintext " 
+          id="staticEmail2" value="Journal entry date" 
+          style="color:white;"
+        >
+      </div>
+      <div class="col-auto elements_space">
+        <label for="inputPassword2" class="visually-hidden">Password</label>
+        <input type="password" class="form-control " id="inputPassword2" placeholder="dd/mm/yyyy">
+      </div>
+    </form>
+  </div>
+  <div >
+    <h1> What are greatful for today</h1>
+    <div class="input-group mb-3 elements_space">
+      <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+      <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
+    </div>
+  </div>
+  <div>
+    <h1> What went well today and what could have been improved</h1>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
 {% endblock %}
